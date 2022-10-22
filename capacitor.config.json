@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "reading-time",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

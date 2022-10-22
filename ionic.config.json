@@ -1,0 +1,7 @@
+{
+  "name": "reading-time",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
