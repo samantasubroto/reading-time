@@ -8,27 +8,35 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path: 'home',
+        loadChildren: () => import('../home/book-home.module').then(m => m.BookHomeModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'premium',
+        loadChildren: () => import('../premium/book-premium.module').then(m => m.BookPremiumModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'search',
+        loadChildren: () => import('../search/book-search.module').then(m => m.BookSearchModule)
+      },
+      {
+        path: 'library',
+        loadChildren: () => import('../library/book-library.module').then(m => m.BookLibraryModule)
+      },
+      {
+        path: 'invite',
+        loadChildren: () => import('../invite/book-invite.module').then(m => m.BookInviteModule)
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];

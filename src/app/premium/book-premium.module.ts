@@ -1,11 +1,12 @@
 import { IonicModule } from '@ionic/angular';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab3Page } from './tab3.page';
+import { BookPremium } from './book-premium';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
-import { Tab3PageRoutingModule } from './tab3-routing.module';
+import { BookPremiumRoutingModule } from './book-premium-routing.module';
 
 @NgModule({
   imports: [
@@ -13,8 +14,8 @@ import { Tab3PageRoutingModule } from './tab3-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab3PageRoutingModule
+    BookPremiumRoutingModule
   ],
-  declarations: [Tab3Page]
+  declarations: [BookPremium]
 })
-export class Tab3PageModule {}
+export class BookPremiumModule {}
