@@ -1,17 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="row m-1">
+    <form [formGroup]="searchForm">
+      <ion-searchbar type="text" formControlName="search"  show-clear-button="always" animated="true"
+      placeholder="search">
+    </ion-searchbar>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-3 column" *ngFor="let genre of genres|keyvalue">
+      <img (click)="searchByGenre(genre.value.name)" src={{genre.value.url}} alt={{genre.value.name}}>
+    </div>
+  </div>
 </ion-content>

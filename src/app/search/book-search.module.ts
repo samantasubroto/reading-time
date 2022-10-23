@@ -1,7 +1,7 @@
 import { IonicModule } from '@ionic/angular';
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BookSearch } from './book-search';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
@@ -13,8 +13,10 @@ import { BookSearchRoutingModule } from './book-search-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    BookSearchRoutingModule
+    BookSearchRoutingModule,
+    ReactiveFormsModule,
   ],
   declarations: [BookSearch]
 })
-export class BookSearchModule {}
+export class BookSearchModule {
+}
