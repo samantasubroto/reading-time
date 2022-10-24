@@ -1,14 +1,39 @@
-._genre_display{
-    
-}
+._genre_display {}
 
 .column {
-    width:33.33333333%;
-    float:left;
+  width: 33.33333333%;
+  float: left;
 }
 
 .column img {
-    width:100%;
-    height:auto;
-    margin: 1px;
+  width: 100%;
+  height: auto;
+  margin: 1px;
+}
+
+.badge_container {
+  ion-badge {
+    font-size: 3vw;
+    padding: 1vw;
+    border: 1rem;
+    margin-left: 2vw;
+    cursor: pointer;
+  }
+}
+
+ion-badge {
+  background-color: black;
+  border: 0ch;
+  color: white;
+}
+
+._recent_search {
+  align-items: center;
+  margin-left: 3px;
+  font-size: 20px;
+  margin-bottom: 5px;
+
+  ion-icon {
+    color: red;
+  }
 }

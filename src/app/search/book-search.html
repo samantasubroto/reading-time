@@ -9,11 +9,29 @@
 <ion-content [fullscreen]="true">
   <div class="row m-1">
     <form [formGroup]="searchForm">
-      <ion-searchbar type="text" formControlName="search"  show-clear-button="always" animated="true"
-      placeholder="search">
-    </ion-searchbar>
+      <ion-searchbar type="text" formControlName="search" show-clear-button="always" animated="true"
+        placeholder="search">
+      </ion-searchbar>
     </form>
   </div>
+
+  <div class="row _recent_search">
+    <div class="col col-10">
+      <h4>{{RecentSearchTitle.recentSearch}}</h4>
+    </div>
+    <div class="col col-2">
+      <ion-icon (click)="clearLocalStorage()" slot="end" name="trash-bin-outline"></ion-icon>
+    </div>
+  </div>
+
+  <div class="row">
+    <ng-container *ngFor="let recentSearch of recentSearches">
+      <div class="col badge_container">
+        <ion-badge (click)="searchByRecentSearchName(recentSearch.name)">{{recentSearch.name}}</ion-badge>
+      </div>
+    </ng-container>
+  </div>
+
   <div class="row">
     <div class="col-3 column" *ngFor="let genre of genres|keyvalue">
       <img (click)="searchByGenre(genre.value.name)" src={{genre.value.url}} alt={{genre.value.name}}>

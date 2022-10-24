@@ -73,3 +73,8 @@ export const Genres = {
     url: 'https://upload.wikimedia.org/wikipedia/en/4/4c/Sci_Fi_Science%3B_Physics_of_the_Impossible_2009_Intertitle.png',
   },
 };
+
+
+export const RecentSearch = {
+  recentSearch: 'Recent Search',
+}
