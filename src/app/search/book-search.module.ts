@@ -1,11 +1,12 @@
-import { IonicModule } from '@ionic/angular';
-import { NgModule, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BookSearch } from './book-search';
+import { RouterModule } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
+import { BookSearch } from './book-search';
 import { BookSearchRoutingModule } from './book-search-routing.module';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   imports: [
@@ -15,8 +16,10 @@ import { BookSearchRoutingModule } from './book-search-routing.module';
     ExploreContainerComponentModule,
     BookSearchRoutingModule,
     ReactiveFormsModule,
+    RouterModule
   ],
-  declarations: [BookSearch]
+  declarations: [BookSearch],
+  providers:[SearchResultsComponent]
 })
 export class BookSearchModule {
 }

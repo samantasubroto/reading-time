@@ -4,7 +4,7 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
@@ -28,18 +28,23 @@ const routes: Routes = [
         loadChildren: () => import('../invite/book-invite.module').then(m => m.BookInviteModule)
       },
       {
+        path: 'search-results',
+        loadChildren: () =>
+          import('../search/search-results/search-results.module').then((m) => m.SearchResultsModule),
+      },
+      {
         path: '',
-        redirectTo: '/tabs/home',
+        redirectTo: 'home',
         pathMatch: 'full'
       }
     ]
   },
   {
-    path: '',
-    redirectTo: '/tabs/home',
-    pathMatch: 'full'
-  }
-];
+    path: 'search',
+    loadChildren: () => import('../search/book-search.module').then(m => m.BookSearchModule)
+  },
+]
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

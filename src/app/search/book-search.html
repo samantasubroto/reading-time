@@ -27,14 +27,25 @@
   <div class="row">
     <ng-container *ngFor="let recentSearch of recentSearches">
       <div class="col badge_container">
-        <ion-badge (click)="searchByRecentSearchName(recentSearch.name)">{{recentSearch.name}}</ion-badge>
+        <ion-badge (click)="searchByRecentSearchName(recentSearch.name)">
+          <a [routerLink]="['/','library']" 
+             [queryParams]="{ code: recentSearch.name }"
+          >
+          {{recentSearch.name}}
+          </a>
+        </ion-badge>
       </div>
     </ng-container>
   </div>
 
   <div class="row">
     <div class="col-3 column" *ngFor="let genre of genres|keyvalue">
-      <img (click)="searchByGenre(genre.value.name)" src={{genre.value.url}} alt={{genre.value.name}}>
+      <img 
+        [routerLink]="['/','library']" 
+        [queryParams]="{ code: genre.value.name }" 
+        src={{genre.value.url}}
+        alt={{genre.value.name}}
+      >
     </div>
   </div>
 </ion-content>

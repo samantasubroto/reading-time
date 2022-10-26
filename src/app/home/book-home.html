@@ -7,11 +7,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- <div class="wrapper">
+    <div class="grid">
+      
+      <app-book-pagination *ngFor="let book of books.items | paginate : 
+              { itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: books.totalItems.toString()}; 
+              let i = index" [book]="book">
+      </app-book-pagination>
+    </div>
+ 
+    <ion-footer>
+      <pagination-controls class="paginator" previousLabel="Prev" nextLabel="Next" (pageChange)="onChange($event)">
+      </pagination-controls>
+    </ion-footer>
+  </div> -->
 </ion-content>

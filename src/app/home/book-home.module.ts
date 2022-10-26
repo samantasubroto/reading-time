@@ -6,6 +6,9 @@ import { BookHome } from './book-home';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { BookHomePageRoutingModule } from './book-home-routing.module';
+import { BookPaginationModule } from '../components/pagination/book-pagination.module';
+import { BookPaginationComponent } from '../components/pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   imports: [
@@ -13,8 +16,8 @@ import { BookHomePageRoutingModule } from './book-home-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    BookHomePageRoutingModule
+    BookHomePageRoutingModule,
   ],
-  declarations: [BookHome]
+  declarations: [BookHome,BookPaginationComponent]
 })
 export class BookHomeModule {}

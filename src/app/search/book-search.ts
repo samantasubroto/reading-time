@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
+import { Books } from '../model/book-custom-model';
 
-import { Genres, RecentSearch } from '../modal/data-source';
+import { Genres, RecentSearch } from '../model/data-source';
 import { BookServiceService } from '../service/book-service.service';
 
 @Component({
@@ -16,6 +17,7 @@ export class BookSearch implements OnInit {
   searchForm: FormGroup;
   recentSearchs;
   RecentSearchTitle = RecentSearch;
+  books: Books;
   constructor(private bookService: BookServiceService) {}
 
   ngOnInit(): void {
@@ -28,12 +30,18 @@ export class BookSearch implements OnInit {
       .get('search')
       .valueChanges.pipe(debounceTime(3000))
       .subscribe((element) => {
-        this.bookService.searchByName(element).subscribe((response) => {});
+        if(element){
+          this.bookService.searchByName(element).subscribe((response) => {
+            console.log(response)
+          });
+        }
       });
   }
 
   searchByGenre(genre: string) {
-    this.bookService.searchBookByGenre(genre).subscribe((response) => {});
+    this.bookService.searchBookByGenre(genre).subscribe((response) => {
+      console.log(response)
+    });
   }
 
   clearLocalStorage() {
@@ -43,7 +51,8 @@ export class BookSearch implements OnInit {
 
   searchByRecentSearchName(recentSearchName: String) {
     this.bookService.searchByName(recentSearchName).subscribe((response) => {
-      console.log(response);
+      this.books = response;
+      console.log(this.books);
     });
   }
 }

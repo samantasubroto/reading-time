@@ -6,11 +6,16 @@ const routes: Routes = [
   {
     path: '',
     component: BookSearch,
-  }
+  },
+  {
+    path: 'search-results',
+    loadChildren: () =>
+      import('./search-results/search-results.module').then((m) => m.SearchResultsModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class BookSearchRoutingModule {}
