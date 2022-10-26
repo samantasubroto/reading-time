@@ -1,0 +1,51 @@
+{
+    "country": "IN",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+}
+
+
+
+{
+    "title": "The Prince: The Original Classic",
+    "authors": [
+        "Niccolò Machiavelli"
+    ],
+    "publisher": "John Wiley & Sons",
+    "publishedDate": "2010-08-30",
+    "description": "THE HANDBOOK FOR LEADERS The Prince is often regarded as the first true leadership book. It shocked contemporary readers with its ruthless call for fearless and effective action. With simple prose and straightforward logic Machiavelli's guide still has the power to surprise and inform anyone hoping to make their way in the world. This keepsake edition includes an introduction by Tom Butler-Bowdon, drawing out lessons for managers and business leaders, and showing how The Prince remains vital reading for anyone in the realm of business or politics.",
+    "industryIdentifiers": [
+        {
+            "type": "ISBN_13",
+            "identifier": "9780857080783"
+        },
+        {
+            "type": "ISBN_10",
+            "identifier": "0857080784"
+        }
+    ],
+    "readingModes": {
+        "text": false,
+        "image": true
+    },
+    "pageCount": 240,
+    "printType": "BOOK",
+    "categories": [
+        "Political Science"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+    },
+    "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=hiXMDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=hiXMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.co.in/books?id=hiXMDwAAQBAJ&printsec=frontcover&dq=classic&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.co.in/books?id=hiXMDwAAQBAJ&dq=classic&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Prince_The_Original_Classic.html?hl=&id=hiXMDwAAQBAJ"
+}

@@ -1,0 +1,14 @@
+<ion-item>
+  <div class="col-3">
+    <ion-thumbnail slot="start">
+      <img [src]="book?.volumeInfo?.imageLinks?.thumbnail" [alt]="book?.volumeInfo?.title">
+    </ion-thumbnail>
+  </div>
+  <div class="col-8">
+    <h6>{{book?.volumeInfo?.title}}</h6>
+    <p *ngIf="book?.volumeInfo?.categories" class="_items_para">Genre: {{book?.volumeInfo?.categories}}</p>
+    <small>{{book.volumeInfo.authors}}</small>
+    <p>{{book?.volumeInfo?.saleInfo?.listPrice?.amount}} {{book?.volumeInfo?.saleInfo?.listPrice?.currencyCode}}
+    </p>
+  </div>
+</ion-item>

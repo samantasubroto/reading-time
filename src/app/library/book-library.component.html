@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="books">
+    <app-book-pagination 
+      *ngFor="let book of books.items
+       | paginate : { 
+          itemsPerPage: itemsPerPage,
+          currentPage: currentPage, 
+          totalItems: books.totalItems.toString()
+        }; 
+      let i = index" [book]="book">
+    </app-book-pagination>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <pagination-controls
+    class="paginator" 
+    previousLabel="Prev" 
+    nextLabel="Next" 
+    (pageChange)="onChange($event)">
+  </pagination-controls>
+</ion-footer>
